@@ -1,0 +1,133 @@
+
+version: 2
+
+models:
+  - name: fact_sales
+    description: Sales fact table containing order details, product information and sales order information.
+
+    columns:
+      - name: SalesOrderID
+        description: Identifier of the sales order.
+        tests:
+          - not_null
+
+      - name: SalesOrderDetailID
+        description: Unique identifier of each sales order line.
+        tests:
+          - unique
+          - not_null
+
+      - name: OrderQty
+        description: Quantity of products ordered.
+        tests:
+          - not_null
+
+      - name: ProductID
+        description: Identifier of the ordered product.
+        tests:
+          - not_null
+
+      - name: UnitPrice
+        description: Selling price per unit.
+        tests:
+          - not_null
+
+      - name: UnitPriceDiscount
+        description: Discount applied to the unit price.
+
+      - name: LineTotal
+        description: Total amount for the sales order line.
+        tests:
+          - not_null
+
+      - name: Name
+        description: Name of the product.
+
+      - name: ProductNumber
+        description: Product identification number.
+
+      - name: Color
+        description: Product color.
+
+      - name: StandardCost
+        description: Standard cost of the product.
+
+      - name: ListPrice
+        description: Listed selling price of the product.
+
+      - name: Size
+        description: Product size.
+
+      - name: Weight
+        description: Product weight.
+
+      - name: SellStartDate
+        description: Date when the product became available for sale.
+
+      - name: SellEndDate
+        description: Date when the product stopped being available for sale.
+
+      - name: DiscontinuedDate
+        description: Date when the product was discontinued.
+
+      - name: ThumbnailPhotoFileName
+        description: Product thumbnail image filename.
+
+      - name: RevisionNumber
+        description: Revision number of the sales order.
+
+      - name: OrderDate
+        description: Date the sales order was placed.
+        tests:
+          - not_null
+
+      - name: DueDate
+        description: Expected due date of the order.
+
+      - name: ShipDate
+        description: Date the order was shipped.
+
+      - name: Status
+        description: Current status of the sales order.
+
+      - name: OnlineOrderFlag
+        description: Indicates whether the order was placed online.
+
+      - name: SalesOrderNumber
+        description: Sales order reference number.
+
+      - name: PurchaseOrderNumber
+        description: Customer purchase order reference.
+
+      - name: AccountNumber
+        description: Customer account number.
+
+      - name: CustomerID
+        description: Identifier of the customer.
+
+      - name: ShipToAddressID
+        description: Shipping address identifier.
+
+      - name: BillToAddressID
+        description: Billing address identifier.
+
+      - name: ShipMethod
+        description: Shipping method used.
+
+      - name: CreditCardApprovalCode
+        description: Credit card approval reference.
+
+      - name: SubTotal
+        description: Sales order subtotal.
+
+      - name: TaxAmt
+        description: Tax amount for the sales order.
+
+      - name: Freight
+        description: Freight charge.
+
+      - name: TotalDue
+        description: Total amount due for the sales order.
+
+      - name: Comment
+        description: Additional sales order comments.

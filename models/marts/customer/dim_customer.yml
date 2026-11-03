@@ -1,0 +1,44 @@
+
+version: 2
+
+models:
+  - name: dim_customer
+    description: Customer dimension table containing customer details and address information.
+
+    columns:
+      - name: customer_sk
+        description: Surrogate key of the customer record.
+        tests:
+          - unique
+          - not_null
+
+      - name: CustomerId
+        description: Natural key identifying the customer.
+        tests:
+          - not_null
+
+      - name: FullName
+        description: Full name of the customer.
+
+      - name: AddressId
+        description: Address identifier associated with the customer.
+        tests:
+          - not_null
+
+      - name: AddressType
+        description: Type of customer address.
+
+      - name: AddressLine1
+        description: First line of the customer's address.
+
+      - name: City
+        description: Customer's city.
+
+      - name: StateProvince
+        description: Customer's state or province.
+
+      - name: CountryRegion
+        description: Customer's country or region.
+
+      - name: PostalCode
+        description: Customer's postal code.

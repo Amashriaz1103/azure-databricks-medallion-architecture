@@ -1,0 +1,58 @@
+
+version: 2
+
+models:
+  - name: dim_product
+    description: Product dimension containing product, pricing, model and availability information.
+
+    columns:
+      - name: product_sk
+        description: Surrogate key of the product.
+        tests:
+          - unique
+          - not_null
+
+      - name: ProductID
+        description: Natural key identifying the product.
+        tests:
+          - not_null
+
+      - name: product_name
+        description: Name of the product.
+        tests:
+          - not_null
+
+      - name: StandardCost
+        description: Standard cost of the product.
+
+      - name: ListPrice
+        description: List price of the product.
+
+      - name: Size
+        description: Product size.
+
+      - name: Weight
+        description: Product weight.
+
+      - name: ProductCategoryID
+        description: Identifier of the product category.
+
+      - name: ProductModelID
+        description: Identifier of the product model.
+
+      - name: model
+        description: Name of the product model.
+
+      - name: description
+        description: Product model catalog description.
+
+      - name: SellStartDate
+        description: Date when the product becomes available for sale.
+        tests:
+          - not_null
+
+      - name: SellEndDate
+        description: Date when the product is no longer available for sale.
+
+      - name: DiscontinuedDate
+        description: Date when the product is discontinued.

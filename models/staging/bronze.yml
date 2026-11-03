@@ -1,0 +1,16 @@
+
+version: 2
+
+sources:
+  - name: saleslt
+    database: medallion_databricks
+    schema: saleslt
+
+    tables:
+      - name: address
+      - name: customer
+      - name: customeraddress
+      - name: product
+      - name: productmodel
+      - name: salesorderdetail
+      - name: salesorderheader
